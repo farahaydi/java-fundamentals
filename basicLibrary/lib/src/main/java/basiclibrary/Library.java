@@ -67,23 +67,24 @@ public class Library {
     }
     //================================================================
     public static int[] arraysOfArrays(int[][] array) {
-        int minAvg = Integer.MAX_VALUE;
-        int minIndex = -1;
-        int avg;
+        double minAvg = Integer.MAX_VALUE;
+        double minIndex = -1;
+        double avg;
         for (int i = 0; i < array.length; i++) {
             avg = 0;
             for (int j = 0; j < array[i].length; j++) {
                 avg += array[i][j];
-//                System.out.print(array[i][j] + " ");
+                System.out.print(array[i][j] + " ");
             }
-//            System.out.println("Array of " + i + " " + avg);
+            avg/=array[i].length;
+            System.out.println("Array of " + i + " " + avg);
             if (avg < minAvg) {
                 minAvg = avg;
                 minIndex = i;
             }
-//            System.out.println();
+            System.out.println();
         }
 
-        return array[minIndex];
+        return array[(int) minIndex];
     }
 }

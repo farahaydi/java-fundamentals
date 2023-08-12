@@ -3,7 +3,10 @@ package basiclibrary;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -46,5 +49,42 @@ class LibraryTest {
                 {65, 56, 55, 52, 55, 62, 57}
         };
         Assertions.assertArrayEquals(testingArray[2], sut.arraysOfArrays(testingArray));
+    }
+
+    @Test
+    void tally() {
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+        String result = Library.tally(votes);
+
+        Assertions.assertEquals("Bush Is Winner, Contest 5 Votes!", result);
+    }
+
+    @Test
+    void AnalyzingWeatherData() {
+        int[][] octoberSeattleWeatherData = {
+                {50, 55, 60},
+                {62, 65, 70},
+                {51, 54, 57}
+        };
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        Library.AnalyzingWeatherData(octoberSeattleWeatherData);
+
+        System.setOut(System.out);
+
+        String output = outputStream.toString();
+        Assertions.assertTrue(output.contains("Minimum Number is : 50"));
+        Assertions.assertTrue(output.contains("Maximum Number is : 70"));
+        Assertions.assertTrue(output.contains("51 Was Not Found"));
     }
 }

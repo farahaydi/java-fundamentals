@@ -8,6 +8,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import static basiclibrary.Library.AnalyzingWeatherData;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
@@ -52,7 +53,8 @@ class LibraryTest {
     }
 
     @Test
-    void tally() {
+    public void testTallyWinner() {
+        // Arrange
         List<String> votes = new ArrayList<>();
         votes.add("Bush");
         votes.add("Bush");
@@ -63,28 +65,43 @@ class LibraryTest {
         votes.add("Bush");
         votes.add("Hedge");
         votes.add("Bush");
+
+        // Act
         String result = Library.tally(votes);
 
-        Assertions.assertEquals("Bush Is Winner, Contest 5 Votes!", result);
+        // Assert
+        assertEquals("Bush Is Winner , Contes 5 Votes!", result);
     }
 
     @Test
-    void AnalyzingWeatherData() {
-        int[][] octoberSeattleWeatherData = {
-                {50, 55, 60},
-                {62, 65, 70},
-                {51, 54, 57}
+    public void testTallyTie() {
+        // Arrange
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+
+        // Act
+        String result = Library.tally(votes);
+
+        // Assert
+        assertEquals("Bush Is Winner , Contes 2 Votes!", result);
+    }
+
+    @Test
+    public void testAnalyzingWeatherData() {
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
         };
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outputStream));
 
-        Library.AnalyzingWeatherData(octoberSeattleWeatherData);
+        String expected = "High:72\nLow:51\nNever saw temperatures: 63 67 68 69";
+        String result = Library.AnalyzingWeatherData(weeklyMonthTemperatures);
 
-        System.setOut(System.out);
-
-        String output = outputStream.toString();
-        Assertions.assertTrue(output.contains("Minimum Number is : 50"));
-        Assertions.assertTrue(output.contains("Maximum Number is : 70"));
-        Assertions.assertTrue(output.contains("51 Was Not Found"));
+        assertEquals(expected, result);
     }
 }

@@ -9,16 +9,16 @@ public class Library {
         return true;
     }
     public static void main(String[] args) {
-        // LAB 02 Function :
-//        System.out.println(roll(9));
+//         LAB 02 Function :
+        System.out.println(roll(9));
         System.out.println("======================================");
 
-//        int array[]={1,2,3,4,7,1};
-//        System.out.println(containsDuplicates(array));
+        int array[]={1,2,3,4,7,1};
+        System.out.println(containsDuplicates(array));
         System.out.println("======================================");
 
 
-//        System.out.println(calculatingAverages(array));
+        System.out.println(calculatingAverages(array));
         System.out.println("======================================");
 
         int[][] testingArray = {
@@ -27,7 +27,7 @@ public class Library {
                 {55, 54, 60, 53, 59, 57, 61},
                 {65, 56, 55, 52, 55, 62, 57}
         };
-//        System.out.println(Arrays.toString(arraysOfArrays(testingArray)));
+        System.out.println(Arrays.toString(arraysOfArrays(testingArray)));
         System.out.println("======================================");
 
 
@@ -35,18 +35,18 @@ public class Library {
         System.out.println(AnalyzingWeatherData(testingArray));
         System.out.println("======================================");
 
-//        List<String> votes = new ArrayList<>();
-//        votes.add("Bush");
-//        votes.add("Bush");
-//        votes.add("Bush");
-//        votes.add("Shrub");
-//        votes.add("Hedge");
-//        votes.add("Shrub");
-//        votes.add("Bush");
-//        votes.add("Hedge");
-//        votes.add("Bush");
-//
-//        System.out.println(tally(votes));
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+        System.out.println(tally(votes));
 
 
     }
@@ -170,6 +170,5 @@ public class Library {
             }
         }
         return Winner + " Is Winner , Contes " + maxVotes + " Votes!";
-
-
-    }}
+    }
+}

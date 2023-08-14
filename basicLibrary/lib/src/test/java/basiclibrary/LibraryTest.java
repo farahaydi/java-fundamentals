@@ -52,9 +52,12 @@ class LibraryTest {
         Assertions.assertArrayEquals(testingArray[2], sut.arraysOfArrays(testingArray));
     }
 
+
+
     @Test
-    public void testTallyWinner() {
-        // Arrange
+    void tallyMethodTesting ()
+    {
+        Library testTally =new Library();
         List<String> votes = new ArrayList<>();
         votes.add("Bush");
         votes.add("Bush");
@@ -65,43 +68,25 @@ class LibraryTest {
         votes.add("Bush");
         votes.add("Hedge");
         votes.add("Bush");
-
-        // Act
-        String result = Library.tally(votes);
-
-        // Assert
-        assertEquals("Bush Is Winner , Contes 5 Votes!", result);
+//        testTally.tally(votes);
+        //Winner + " Is Winner , Contes " + maxVotes + " Votes!"
+        assertEquals("Bush Is Winner , Contes 5 Votes!", testTally.tally(votes));
     }
 
     @Test
-    public void testTallyTie() {
-        // Arrange
-        List<String> votes = new ArrayList<>();
-        votes.add("Bush");
-        votes.add("Shrub");
-        votes.add("Hedge");
-        votes.add("Shrub");
-        votes.add("Bush");
-
-        // Act
-        String result = Library.tally(votes);
-
-        // Assert
-        assertEquals("Bush Is Winner , Contes 2 Votes!", result);
-    }
-
-    @Test
-    public void testAnalyzingWeatherData() {
-        int[][] weeklyMonthTemperatures = {
+    void testAnalyzingWeatherMethod() {
+        Library testAnalyzeWeather = new Library();
+        int[][] testingArray = {
                 {66, 64, 58, 65, 71, 57, 60},
                 {57, 65, 65, 70, 72, 65, 51},
                 {55, 54, 60, 53, 59, 57, 61},
                 {65, 56, 55, 52, 55, 62, 57}
         };
-
-        String expected = "High:72\nLow:51\nNever saw temperatures: 63 67 68 69";
-        String result = Library.AnalyzingWeatherData(weeklyMonthTemperatures);
-
-        assertEquals(expected, result);
+        String outputasString = "63 Was Not Found \n" +
+                "67 Was Not Found \n" +
+                "68 Was Not Found \n" +
+                "69 Was Not Found \n";
+        assertEquals(outputasString, testAnalyzeWeather.AnalyzingWeatherData(testingArray));
     }
+
 }

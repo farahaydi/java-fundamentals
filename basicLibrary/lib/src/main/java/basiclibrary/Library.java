@@ -124,9 +124,9 @@ public class Library {
             }
         }
 
-        System.out.println("Minimum Number is: " + minNumber);
-        System.out.println("Maximum Number is: " + maxNumber);
-        System.out.println(uniqueTemperature);
+//        System.out.println("Minimum Number is: " + minNumber);
+//        System.out.println("Maximum Number is: " + maxNumber);
+//        System.out.println(uniqueTemperature);
         String Notfound ="";
         for (int unique = 51; unique <= 72; unique++) {
             if (!uniqueTemperature.contains(unique)) {

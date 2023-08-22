@@ -18,7 +18,7 @@ class LibraryTest {
     {
         Restaurant testDisplayRestaurant=new Restaurant("FarahRest",5,30);
         Review testDisplayReview =new Review("Great Food!", "Farah", 4.5, testDisplayRestaurant);
-        assertEquals("Great Food!, Farah, 4.5, FarahRest",testDisplayReview.toString());
+        assertEquals("Great Food!, Farah, 4.5, Restaurant: FarahRest",testDisplayReview.toString());
     }
     @Test
     public void testAddReview() {
@@ -31,5 +31,27 @@ class LibraryTest {
         testDisplayRestaurant.addReview(testDisplayReview3);
         assertEquals(4.5, testDisplayRestaurant.numberOfStars);
     }
+    @Test
+    public void testShopClass()
+    {
+        Shop testShop =new Shop("Zara","it's really nice place",3);
+        assertEquals("Zara, it's really nice place, 3",testShop.toString());
+    }
+
+    @Test
+    void testReviewForShop() {
+        Shop shop = new Shop("ShopName", "ShopDescription", 3);
+        Review review = new Review("Good shop!", "Reviewer", 4.0, shop);
+        assertEquals("Good shop!, Reviewer, 4.0, Shop: ShopName", review.toString());
+    }
+
+    @Test
+    void testTheater() {
+        Theater theater = new Theater("TheaterName");
+        theater.addMovie("Movie1");
+        theater.addMovie("Movie2");
+        assertEquals("TheaterName - Movies: [Movie1, Movie2]", theater.toString());
+    }
+
 
 }

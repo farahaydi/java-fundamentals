@@ -24,3 +24,26 @@
 - AnalyzingWeatherData
 - tally
 - JavaScriptLinter
+
+- # **LAB06**
+>on this lab I create 2 class
+- Restaurant -> on this class we have some Attribute: 1- restaurantName 2-numberOfStars 3-categoryPrice 4-ReviewList 'from type Review'
+- [RestaurantClass](./inheritance/lib/src/main/java/inheritance/Restaurant.java)
+- 
+    and some method :1- setNumberOfStars =>(to check that number of star between 1 and 5)
+                     2- toString => to display all data we set on this class.
+                     3- getRestaurantName => return Restaurant Name
+                     4- getCategoryPrice => to return Category Price with '$'
+                     5-addReview => to make sure that review associate with restaurant and calculate the avg of numberOfStars
+
+- Review -> on this class we have 1-reviewBody 2-author 3-numberOfStars 4-restaurant
+- [ReviewClass](./inheritance/lib/src/main/java/inheritance/Review.java)
+- 
+    and some method :- 1- setNumberOfStars =>(to check that number of star between 1 and 5)
+                       2- toString => to display all data we set on this class.
+- Library -> I just create an object from RestaurantClass and ReviewClass and check the method 
+- [LibraryClass](./inheritance/lib/src/main/java/inheritance/Library.java)
+
+- Testing 
+- I make 3 test on this file 
+- [LibraryTest](./inheritance/lib/src/test/java/inheritance/LibraryTest.java)

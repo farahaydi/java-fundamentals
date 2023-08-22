@@ -24,7 +24,9 @@
 - AnalyzingWeatherData
 - tally
 - JavaScriptLinter
-# **LAB06**
+- 
+- # **LAB06**
+
 >on this lab I create 2 class
 - Restaurant -> on this class we have some Attribute: 1- restaurantName 2-numberOfStars 3-categoryPrice 4-ReviewList 'from type Review'
 - [RestaurantClass](./inheritance/lib/src/main/java/inheritance/Restaurant.java)
@@ -46,6 +48,7 @@
 - Testing 
 - I make 3 test on this file 
 - [LibraryTest](./inheritance/lib/src/test/java/inheritance/LibraryTest.java)
+
 - 
 - # **LAB07**
 >on this lab I create 2 class and 1 Interface

@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class Restaurant {
+public class Restaurant implements ShopOrRestaurant {
     protected String restaurantName;
     protected double numberOfStars;
     protected double categoryPrice;
@@ -12,17 +12,20 @@ public class Restaurant {
         this.restaurantName = restaurantName;
         setNumberOfStars(numberOfStars);
         this.categoryPrice = categoryPrice;
-        this.ReviewList=new ArrayList<>();
+        this.ReviewList = new ArrayList<>();
     }
 
+    @Override
+    public String getName() {
+        return restaurantName;
+    }
 
     public void setNumberOfStars(double numberOfStars) {
-        if (numberOfStars>5 || numberOfStars<1)
-        {
+        if (numberOfStars > 5 || numberOfStars < 1) {
             System.out.println("Rates must be between 0 and 5");
-        }
-        else
+        } else {
             this.numberOfStars = numberOfStars;
+        }
     }
 
     public String getRestaurantName() {
@@ -41,11 +44,16 @@ public class Restaurant {
                 newAvg += r.numberOfStars;
             }
             numberOfStars = newAvg / ReviewList.size();
-        }else {
+        } else {
             System.out.println("Review is already associated with the restaurant.");
         }
     }
+
     public String toString() {
-        return this.restaurantName + ", " + this.numberOfStars + ", " + getCategoryPrice()+", "+this.ReviewList.size() ;
+        return this.restaurantName + ", " + this.numberOfStars + ", " + getCategoryPrice() + ", " + this.ReviewList.size();
+    }
+
+    public double getNumberOfStars() {
+        return numberOfStars;
     }
 }

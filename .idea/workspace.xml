@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abe66a7b-e81a-456d-aaf2-887af8c0ce6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Shop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/ShopOrRestaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Theater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inheritance/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/addReview.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Restaurant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/ShopOrRestaurant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Theater.java" beforeDir="false" afterPath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Theater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inheritance/lib/src/test/java/inheritance/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/inheritance/lib/src/test/java/inheritance/LibraryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

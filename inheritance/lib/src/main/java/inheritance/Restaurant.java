@@ -2,23 +2,25 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class Restaurant implements ShopOrRestaurant {
-    protected String restaurantName;
+public class Restaurant extends addReview {
+//    protected String restaurantName;
     protected double numberOfStars;
     protected double categoryPrice;
     protected ArrayList<Review> ReviewList;
 
-    public Restaurant(String restaurantName, double numberOfStars, double categoryPrice) {
-        this.restaurantName = restaurantName;
-        setNumberOfStars(numberOfStars);
-        this.categoryPrice = categoryPrice;
-        this.ReviewList = new ArrayList<>();
+//    public Restaurant(String restaurantName, double numberOfStars, double categoryPrice) {
+//        this.restaurantName = restaurantName;
+//        setNumberOfStars(numberOfStars);
+//        this.categoryPrice = categoryPrice;
+//        this.ReviewList = new ArrayList<>();
+//    }
+
+    public Restaurant(String name,int stars, int price) {
+        super(name);
+        this.stars=Math.max(0, Math.min(5, stars));
+        this.categoryPrice=price;
     }
 
-    @Override
-    public String getName() {
-        return restaurantName;
-    }
 
     public void setNumberOfStars(double numberOfStars) {
         if (numberOfStars > 5 || numberOfStars < 1) {
@@ -28,32 +30,45 @@ public class Restaurant implements ShopOrRestaurant {
         }
     }
 
-    public String getRestaurantName() {
-        return restaurantName;
-    }
+//    public String getRestaurantName() {
+//        return restaurantName;
+//    }
+@Override
+public String getName() {
+    return name;
+}
 
     public String getCategoryPrice() {
         return categoryPrice + "$";
     }
 
-    public void addReview(Review reviewList) {
-        if (!ReviewList.contains(reviewList)) {
-            ReviewList.add(reviewList);
-            double newAvg = 0;
-            for (Review r : ReviewList) {
-                newAvg += r.numberOfStars;
-            }
-            numberOfStars = newAvg / ReviewList.size();
-        } else {
-            System.out.println("Review is already associated with the restaurant.");
-        }
-    }
+//    @Override
+//    public void addReview(Review review) {
+//        if (!ReviewList.contains(review)) {
+//            ReviewList.add(review);
+//            Averagee();
+//        }
+//    }
 
+//    public void Averagee() {
+//            double newAvg = 0;
+//            for (Review r : ReviewList) {
+//                newAvg += r.numberOfStars;
+//            }
+//            numberOfStars = newAvg / ReviewList.size();
+//        System.out.println(numberOfStars);
+//    }
+
+    @Override
     public String toString() {
-        return this.restaurantName + ", " + this.numberOfStars + ", " + getCategoryPrice() + ", " + this.ReviewList.size();
+        return "Restaurant{" +
+                "name='" + name + '\'' +
+                ", stars=" + stars +
+                ", price=" + categoryPrice +
+                '}';
     }
 
-    public double getNumberOfStars() {
-        return numberOfStars;
-    }
+//    public double getNumberOfStars() {
+//        return numberOfStars;
+//    }
 }

@@ -5,43 +5,31 @@ package inheritance;
 
 public class Library {
     public static void main(String[] args) {
-//        Restaurant restaurant = new Restaurant("AmmanRest", 4.1, 50);
-//
-//        Review review1 = new Review("Great Food!", "Farah", 4.5, restaurant);
-//        restaurant.addReview(review1);
-//
-//        Review review2 = new Review("Nicee", "Fofo", 3.0, restaurant);
-//        restaurant.addReview(review2);
-//
-//        Review review3 = new Review("I like the food", "Fefe", 5.0, restaurant);
-//        restaurant.addReview(review3);
-//
-//        System.out.println("Review 01: " + restaurant.numberOfStars);
-//        System.out.println("Review 02: " + restaurant.numberOfStars);
-//        System.out.println("Review 03: " + restaurant.numberOfStars);
-//
-//        restaurant.addReview(review1);
-//
-//        System.out.println(restaurant.toString());
-//        System.out.println(review3.toString());
-//        System.out.println("Last Rate Of Our Restaurant " + restaurant.numberOfStars);
-        ShopOrRestaurant restaurant = new Restaurant("AmmanRest", 4.1, 50);
-        ShopOrRestaurant shop = new Shop("BookShop", "A cozy bookstore", 2);
-        Theater theater = new Theater("Cineplex");
-        Review review1 = new Review("Great Food!", "Farah", 4.5, restaurant);
-        ((Restaurant) restaurant).addReview(review1);
+        Restaurant restaurant = new Restaurant("Farah Resteurant", 3, 50);
+        Shop shop = new Shop("SubermarketFarah", "Fruait", 3);
+        Theater theater = new Theater("Farah");
 
-        Review review2 = new Review("Good shop!", "Reviewer", 4.0, shop);
+        theater.addMovie("One Piece");
+        theater.addMovie("barbie");
 
-        theater.addMovie("Movie1");
-        theater.addMovie("Movie2");
-        Review review3 = new Review("Nice theater experience!", "Moviegoer", 4.8, theater, "Movie1");
+        theater.removeMovie("barbie");
 
-        System.out.println("Restaurant Review 01: " + ((Restaurant) restaurant).getNumberOfStars());
-        System.out.println("Review 01: " + review1.toString());
+        Review review1 = new Review("test1", "nice food", 5, restaurant);
+        Review review2 = new Review("test2", "Amazing food", 3, restaurant);
+        Review review3 = new Review("test3", "good fruite", 4, shop);
+        Review review4 = new Review("test4", "nice movie", 5, "One Piece", theater);
+        Review review5 = new Review("test5", "nice movie", 4, theater);
 
-        System.out.println("Review 01: " + review1.toString());
-        System.out.println("Review 02: " + review2.toString());
-        System.out.println("Review 03: " + review3.toString());
-   }
+
+        restaurant.addReview(review1);
+        restaurant.addReview(review2);
+        shop.addReview(review3);
+        theater.addReview(review4);
+        theater.addReview(review5);
+
+        System.out.println(restaurant);
+        System.out.println(shop);
+        System.out.println(theater);
+
+    }
 }

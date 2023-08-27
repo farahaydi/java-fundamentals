@@ -52,26 +52,22 @@
 - Shop -> on this class we have some Attribute: 1- name 2-description 3-numberOfDollarSigns 
 - [ShopClass](./inheritance/lib/src/main/java/inheritance/Shop.java)
 -
-and some method :1- Getter Method: 
-- getName
-- getDescription
-- getNumberOfDollarSigns
+and some method :
+1- getName => override it from superClass addReview
 2- toString => to display all data we set on this class.
 
-- Theater -> on this class we have 1-name 2-movies 
+- Theater -> on this class we have 1-movies 
 - [TheaterClass](./inheritance/lib/src/main/java/inheritance/Theater.java)
 -
 and some method :- 1- addMovie
 2-removeMovie
-3-Getter 
-- getName
-- getMovies
+3- getName => override it from superClass addReview
 4- toString => to display all data we set on this class.
 
-- ShopOrRestaurant Interface ->with single Attribute (getName)
-- Library -> I just create an object from RestaurantClass and ReviewClass shopClass and theaterClass to check all the method
-- [LibraryClass](./inheritance/lib/src/main/java/inheritance/Library.java)
+-Super Class called addReview 
+> we make this super class for all common method then exdends all subclass from this super
+[addReview](./inheritance/lib/src/main/java/inheritance/addReview.java)
 
 - Testing
-- I make 6 test on this file
+- I make 4 test on this file, for both review and toString
 - [LibraryTest](./inheritance/lib/src/test/java/inheritance/LibraryTest.java)
